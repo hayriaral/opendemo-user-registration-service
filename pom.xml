@@ -19,10 +19,11 @@
         <testcontainers.version>1.17.6</testcontainers.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+        <!--TODO add when persistence needed-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-data-jpa</artifactId>-->
+<!--        </dependency>-->
         <!--TODO add when security implementation part-->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
