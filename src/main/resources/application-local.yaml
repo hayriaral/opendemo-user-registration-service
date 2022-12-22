@@ -1,10 +1,6 @@
 server:
   port: 7051
-  shutdown: graceful
-  servlet:
-    context-path: /user-registration-ms-local
 
 logging:
   level:
-    root: info
     web: debug

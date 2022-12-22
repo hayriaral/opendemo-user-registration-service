@@ -1,6 +1,12 @@
 spring:
   application:
     name: opendemo-user-registration-service
-  config:
-    activate:
-      on-profile: ${ACTIVE_PROFILE}
+server:
+  port: ${SERVER_PORT}
+  shutdown: graceful
+  servlet:
+    context-path: /user-registration-ms
+logging:
+  level:
+    root: info
+    web: info
