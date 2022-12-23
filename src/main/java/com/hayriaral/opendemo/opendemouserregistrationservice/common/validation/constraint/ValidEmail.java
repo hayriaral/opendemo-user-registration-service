@@ -1,6 +1,6 @@
-package com.hayriaral.opendemo.opendemouserregistrationservice.validation.constraint;
+package com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraint;
 
-import com.hayriaral.opendemo.opendemouserregistrationservice.validation.constraint.validator.EmailValidator;
+import com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraint.validator.EmailValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
@@ -13,12 +13,20 @@ import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
+/**
+ * Checks that the annotated {@code String} is a valid email.
+ * <p>
+ * {@code null} is considered valid.
+ *
+ * @author Hayri Aral
+ */
 @Target({TYPE, FIELD, ANNOTATION_TYPE})
 @Retention(RUNTIME)
 @Constraint(validatedBy = EmailValidator.class)
 @Documented
 public @interface ValidEmail {
-    String message() default "Invalid email";
+
+    String message() default "{validation.constraint.ValidEmail.message}";
 
     Class<?>[] groups() default {};
 
