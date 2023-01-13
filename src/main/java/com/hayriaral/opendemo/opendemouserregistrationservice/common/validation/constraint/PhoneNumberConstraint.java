@@ -14,7 +14,7 @@ import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
- * Checks that the annotated {@code String} is a valid phone number.
+ * Checks that the annotated {@code CharSequence} is a valid phone number.
  * <p>
  * {@code null} is considered valid.
  *
@@ -24,7 +24,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Retention(RUNTIME)
 @Constraint(validatedBy = PhoneNumberValidator.class)
 @Documented
-public @interface ValidPhoneNumber {
+public @interface PhoneNumberConstraint {
 
     String message() default "{validation.constraint.ValidPhoneNumber.message}";
 
@@ -34,7 +34,7 @@ public @interface ValidPhoneNumber {
 
     /**
      * @return the allowed phone number format Per default E.164 phone number allowed
-     * @see ValidPhoneNumber.Format
+     * @see PhoneNumberConstraint.Format
      */
     Format format() default Format.E164;
 

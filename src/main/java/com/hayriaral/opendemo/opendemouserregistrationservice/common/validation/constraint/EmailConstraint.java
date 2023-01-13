@@ -14,7 +14,7 @@ import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
- * Checks that the annotated {@code String} is a valid email.
+ * Checks that the annotated {@code CharSequence} is a valid email.
  * <p>
  * {@code null} is considered valid.
  *
@@ -24,7 +24,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Retention(RUNTIME)
 @Constraint(validatedBy = EmailValidator.class)
 @Documented
-public @interface ValidEmail {
+public @interface EmailConstraint {
 
     String message() default "{validation.constraint.ValidEmail.message}";
 

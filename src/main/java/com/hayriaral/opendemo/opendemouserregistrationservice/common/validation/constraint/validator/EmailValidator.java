@@ -1,6 +1,6 @@
 package com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraint.validator;
 
-import com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraint.ValidEmail;
+import com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraint.EmailConstraint;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  *
  * @author Hayri Aral
  */
-public class EmailValidator implements ConstraintValidator<ValidEmail, String> {
+public class EmailValidator implements ConstraintValidator<EmailConstraint, CharSequence> {
 
     /**
      * This regular expression uses a combination of letters, numbers, and special characters to match the local-part
@@ -54,7 +54,7 @@ public class EmailValidator implements ConstraintValidator<ValidEmail, String> {
             );
 
     @Override
-    public boolean isValid(String email, ConstraintValidatorContext context) {
+    public boolean isValid(CharSequence email, ConstraintValidatorContext context) {
 
         if (email == null) {
             return true;

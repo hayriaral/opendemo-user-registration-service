@@ -1,6 +1,6 @@
 package com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraint.validator;
 
-import com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraint.ValidPhoneNumber;
+import com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraint.PhoneNumberConstraint;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  *
  * @author Hayri Aral
  */
-public class PhoneNumberValidator implements ConstraintValidator<ValidPhoneNumber, String> {
+public class PhoneNumberValidator implements ConstraintValidator<PhoneNumberConstraint, CharSequence> {
 
     /**
      * E.164 is a standard for formatting phone numbers that includes a country code prefixed by a plus sign
@@ -23,7 +23,7 @@ public class PhoneNumberValidator implements ConstraintValidator<ValidPhoneNumbe
             .compile("^\\+[1-9]\\d{1,14}$");
 
     @Override
-    public boolean isValid(String phoneNumber, ConstraintValidatorContext context) {
+    public boolean isValid(CharSequence phoneNumber, ConstraintValidatorContext context) {
 
         if (phoneNumber == null) {
             return true;
