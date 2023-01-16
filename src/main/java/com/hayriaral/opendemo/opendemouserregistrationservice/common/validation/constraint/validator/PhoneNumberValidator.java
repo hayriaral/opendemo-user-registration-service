@@ -4,7 +4,7 @@ import com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
-import java.util.regex.Pattern;
+import static com.hayriaral.opendemo.opendemouserregistrationservice.common.util.constants.Regex.PHONE_NUMBER_E164_REGEX;
 
 /**
  * Phone number constraint validator.
@@ -13,14 +13,7 @@ import java.util.regex.Pattern;
  */
 public class PhoneNumberValidator implements ConstraintValidator<PhoneNumberConstraint, CharSequence> {
 
-    /**
-     * E.164 is a standard for formatting phone numbers that includes a country code prefixed by a plus sign
-     * (e.g., +1 for the United States), followed by the local phone number.
-     * The country code can be 1-3 digits in length, and the local phone number can be up to a maximum of 14 digits
-     * in length.
-     */
-    private static final Pattern PHONE_NUMBER_E164_REGEX = Pattern
-            .compile("^\\+[1-9]\\d{1,14}$");
+    //TODO: init format then validate according to selected format
 
     @Override
     public boolean isValid(CharSequence phoneNumber, ConstraintValidatorContext context) {
