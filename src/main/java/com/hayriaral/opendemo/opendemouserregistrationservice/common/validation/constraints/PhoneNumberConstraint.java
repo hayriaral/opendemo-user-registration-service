@@ -1,6 +1,6 @@
-package com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraint;
+package com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraints;
 
-import com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraint.validator.PhoneNumberValidator;
+import com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.validator.PhoneNumberValidator;
 import com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.enums.PhoneNumberFormat;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

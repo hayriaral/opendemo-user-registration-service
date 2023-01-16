@@ -1,4 +1,4 @@
-package com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraint.validator;
+package com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.validator;
 
 import jakarta.validation.ConstraintValidatorContext;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,7 +12,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @ExtendWith(MockitoExtension.class)

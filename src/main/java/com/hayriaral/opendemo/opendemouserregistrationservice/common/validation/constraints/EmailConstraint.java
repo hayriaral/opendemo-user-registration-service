@@ -1,6 +1,6 @@
-package com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraint;
+package com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraints;
 
-import com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.constraint.validator.EmailValidator;
+import com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.validator.EmailValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
