@@ -4,7 +4,7 @@ import com.hayriaral.opendemo.opendemouserregistrationservice.common.validation.
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
-import static com.hayriaral.opendemo.opendemouserregistrationservice.common.util.constants.Regex.PHONE_NUMBER_E164_REGEX;
+import static com.hayriaral.opendemo.opendemouserregistrationservice.common.constants.Regex.PHONE_NUMBER_E164_REGEX;
 
 /**
  * Phone number constraint validator.

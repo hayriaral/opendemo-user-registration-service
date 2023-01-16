@@ -1,4 +1,4 @@
-package com.hayriaral.opendemo.opendemouserregistrationservice.common.util.constants;
+package com.hayriaral.opendemo.opendemouserregistrationservice.common.constants;
 
 import java.util.regex.Pattern;
 
